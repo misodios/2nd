@@ -1,0 +1,14 @@
+
+{% load static %}
+
+{% for course in courses %}
+
+    <h2><a href="{{ course.id }}/">{{ course.title }}</a></h2>
+    <p>{{ course.duration|truncatewords:30 }}</p>
+    <img src="{% static w1.png %}" alt="">
+     <p>{{ course.student.name }}</p>
+      <p>{{ course.department }}</p>
+
+
+
+{% endfor %}
